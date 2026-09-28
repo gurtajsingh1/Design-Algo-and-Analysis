@@ -5,7 +5,7 @@
 struct Item{
 int weight;
 int profit;
-int pwr;
+float pwr;
   };
 
 int main(){
@@ -21,8 +21,9 @@ int capacity = 20;
 int totalprofit = 0;
 
 for(int i = 0 ; i< n ; i++){
-  a[i].pwr = (int)a[i].profit/a[i].weight;
+  a[i].pwr = (float)a[i].profit/a[i].weight;
 }
+
 for(int i = 0 ; i< n-1 ; i++){
   for(int j = i+1 ; j< n ;j++){
     if(a[i].pwr < a[j].pwr){
@@ -46,6 +47,6 @@ break;
          }
         
 }
- printf("%d" , totalprofit);
+ printf("%d" , totalprofit );
  return 0;
 }
